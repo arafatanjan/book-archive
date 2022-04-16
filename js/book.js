@@ -9,32 +9,38 @@ const searchFood = () => {
     // console.log(url);
     fetch(url)
         .then(res => res.json())
-        .then(data => displaySearchResult(data.docs));
+        .then(data => displayUsers(data.num_found));
+    const displayUsers = docs => {
+        const totalResult = document.getElementById('users');
+
+        const li = document.createElement('li');
+        li.innerHTML = `Search result: ${docs}`;
+        totalResult.appendChild(li);
+    }
+    // console.log(num_found);
     // .then(data => displaySearchResult(data.docs[0].tittle));
     //     // displaySearchResult
+
+
+    // // }
+
+
+    // // const div = document.createElement('div');
+    // // div.classList.add('col');
+    // // div.innerHTML = `<div><h1>Search result:${meal.num_found}</h1></div>`;
+    // // const displaySearchResult = docs => {
+    // const searchResult = document.getElementById('search-result');
+    // // 
+    // docs.forEach(meal => {
+    //     console.log(meal);
+    // })
+    // const resultText = lenghts.value;
+    // const url = `https://openlibrary.org/search.json?q=${searchText}`;
+    // console.log(url);
+    fetch(url)
+        .then(res => res.json())
+        .then(data => displaySearchResult(data.docs));
 }
-// const displayUsers = docs => {
-// const totalResult = document.getElementById('users');
-// docs.forEach(meal => {
-//     console.log(meal);
-//     const li = document.createElement('li');
-//     li.innertext = `Search result: ${meal.num_found}`s;
-//     URL.appendChild(li);
-// })
-// // }
-
-
-// // const div = document.createElement('div');
-// // div.classList.add('col');
-// // div.innerHTML = `<div><h1>Search result:${meal.num_found}</h1></div>`;
-// // const displaySearchResult = docs => {
-// const searchResult = document.getElementById('search-result');
-// // 
-// docs.forEach(meal => {
-//     console.log(meal);
-// })
-// const resultText = lenghts.value;
-
 const displaySearchResult = meals => {
     const searchResult = document.getElementById('search-result');
     meals.forEach(meal => {
@@ -50,7 +56,7 @@ const displaySearchResult = meals => {
                              <h5 class="card-title">title: ${meal.title}</h5>
                              <h5 class="card-title">author_name: ${meal.author_name}</h5>
                              <h5 class="card-title">publish date: ${meal.publish_date}</h5>
-                             <p class="card-text"></p>
+                            //  <p class="card-text"> </p>
                          </div>
                 </div>
                  `;
