@@ -13,22 +13,31 @@ const searchFood = () => {
     // .then(data => displaySearchResult(data.docs[0].tittle));
     //     // displaySearchResult
 }
+// const displayUsers = docs => {
+// const totalResult = document.getElementById('users');
+// docs.forEach(meal => {
+//     console.log(meal);
+//     const li = document.createElement('li');
+//     li.innertext = `Search result: ${meal.num_found}`s;
+//     URL.appendChild(li);
+// })
+// // }
 
-docs.forEach(meal => {
-    console.log(meal);
-})
-const div = document.createElement('div');
-div.classList.add('col');
-div.innerHTML = `<div><h1>Search result:${meal.num_found}</h1></div>`;
-const displaySearchResult = docs => {
+
+// // const div = document.createElement('div');
+// // div.classList.add('col');
+// // div.innerHTML = `<div><h1>Search result:${meal.num_found}</h1></div>`;
+// // const displaySearchResult = docs => {
+// const searchResult = document.getElementById('search-result');
+// // 
+// docs.forEach(meal => {
+//     console.log(meal);
+// })
+// const resultText = lenghts.value;
+
+const displaySearchResult = meals => {
     const searchResult = document.getElementById('search-result');
-    // // 
-    // docs.forEach(meal => {
-    //     console.log(meal);
-    // })
-    // const resultText = lenghts.value;
-
-    docs.forEach(meal => {
+    meals.forEach(meal => {
         console.log(meal);
 
 
