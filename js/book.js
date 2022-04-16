@@ -14,15 +14,20 @@ const searchFood = () => {
     //     // displaySearchResult
 }
 
+docs.forEach(meal => {
+    console.log(meal);
+})
+const div = document.createElement('div');
+div.classList.add('col');
+div.innerHTML = `<div><h1>Search result:${meal.num_found}</h1></div>`;
 const displaySearchResult = docs => {
     const searchResult = document.getElementById('search-result');
-    const lenghts = docs.map(meal => {
-        console.log(meal.lenght);
-    })
-    const resultText = lenghts.value;
-    const div = document.createElement('div');
-    div.classList.add('col');
-    div.innerHTML = `<div>Search result:${resultText}</div>`
+    // // 
+    // docs.forEach(meal => {
+    //     console.log(meal);
+    // })
+    // const resultText = lenghts.value;
+
     docs.forEach(meal => {
         console.log(meal);
 
@@ -41,5 +46,8 @@ const displaySearchResult = docs => {
                 </div>
                  `;
         searchResult.appendChild(div);
+        // const div = document.createElement('div');
+        // div.classList.add('col');
+        // div.innerHTML = `<div><h1>Search result:${meal.num_found}</h1></div>`;
     })
 }
