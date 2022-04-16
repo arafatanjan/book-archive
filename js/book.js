@@ -12,7 +12,7 @@ const searchFood = () => {
         .then(data => displayUsers(data.num_found));
     const displayUsers = docs => {
         const totalResult = document.getElementById('users');
-
+        totalResult.innerHTML = '';
         const li = document.createElement('li');
         li.innerHTML = `Search result: ${docs}`;
         totalResult.appendChild(li);
@@ -43,6 +43,14 @@ const searchFood = () => {
 }
 const displaySearchResult = meals => {
     const searchResult = document.getElementById('search-result');
+    searchResult.innerHTML = '';
+    if (meals.length === 0) {
+        const totalResult = document.getElementById('users');
+        const li = document.createElement('li');
+        totalResult.innerHTML = '';
+        li.innerHTML = `no reult found`;
+        totalResult.appendChild(li);
+    }
     meals.forEach(meal => {
         console.log(meal);
 
@@ -56,7 +64,7 @@ const displaySearchResult = meals => {
                              <h5 class="card-title">title: ${meal.title}</h5>
                              <h5 class="card-title">author_name: ${meal.author_name}</h5>
                              <h5 class="card-title">publish date: ${meal.publish_date}</h5>
-                            //  <p class="card-text"> </p>
+                              <p class="card-text"> </p>
                          </div>
                 </div>
                  `;
