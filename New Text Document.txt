@@ -4,3 +4,21 @@ const searchFood = () => {
     // console.log(searchText);
     searchField.value = '';
     // searchText = = '';
+
+ // fetch(urp)
+        //     .then(res => res.json())
+        //     .then(data => displaySearchResultt(data.docs));
+
+        // const displaySearchResultt = books => {
+        // const searchResultt = document.getElementById('search-result');
+        // searchResult.innerHTML = '';
+        // if (books.cover_i.length === 0) {
+
+
+// else{console.log(1);}
+            //     const totalResult = document.getElementById('users');
+            //     const li = document.createElement('li');
+            //     // totalResult.innerHTML = '';
+            //     li.innerHTML = `<img src="pic/q.jpg" class="card-img-top w-25 mx-auto" alt="...">`;
+            // totalResult.appendChild(li)
+
